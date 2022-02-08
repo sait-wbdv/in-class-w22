@@ -1,4 +1,5 @@
-const num = 15;
+// const num = 15;
+const num = prompt('Enter a number to square.');
 
 // Fat arrow ES6 Syntax
 const squared = (num) => {

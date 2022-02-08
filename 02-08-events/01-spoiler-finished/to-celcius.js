@@ -1,4 +1,5 @@
-const tempF = 72;
+// const tempF = 72;
+const tempF = prompt('Enter a Temp in Fahrenheit.');
 
 const toCelcius = function(temp) {
   // Enclose the following code in a function that accepts tempF as a parameter

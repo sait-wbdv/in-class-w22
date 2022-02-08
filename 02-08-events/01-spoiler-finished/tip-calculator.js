@@ -1,5 +1,7 @@
-const billTotal = 60;
-const tipRate = 0.18;
+// const billTotal = 60;
+// const tipRate = 0.18;
+const billTotal = prompt('Enter a bill total.');
+const tipRate = prompt('Enter a tip rate.');
 
 const calcTip = (subTotal, rate) => {
   // Enclose the following code in a function that accepts subTotal and tipRate as parameters

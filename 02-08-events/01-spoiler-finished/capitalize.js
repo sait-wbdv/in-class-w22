@@ -1,4 +1,5 @@
-let homeTown = "mIsSIssIPPi";
+// let message = "mIsSIssIPPi";
+let homeTown = prompt("Add a string to capitalize.");
 
 const capitalize = function(string) {
   // Enclose the following code in a function that accepts a string as a parameter
@@ -7,4 +8,4 @@ const capitalize = function(string) {
   console.log(string);
 }
 
-capitalize(homeTown);
+capitalize(message);
