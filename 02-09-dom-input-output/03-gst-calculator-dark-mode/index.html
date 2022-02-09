@@ -7,6 +7,16 @@
   <title>GST Calculator</title>
   <script src="js/gst-calculator.js" defer></script>
   <style>
+    :root {
+      --text-color: hsl(281, 90%, 15%);
+      --bg-color: hsl(40, 50%, 90%);
+    }
+
+    [data-theme="dark"] {
+      --text-color: hsl(40, 50%, 90%);
+      --bg-color: hsl(281, 90%, 15%);
+    }
+
     body {
       margin: 0;
       height: 100vh;
@@ -17,6 +27,9 @@
       align-items: center;
 
       font-size: 36px;
+
+      color: var(--text-color);
+      background-color: var(--bg-color);
     }
 
     input, label, button {
@@ -73,7 +86,7 @@
       width: 26px;
     }
     input:checked + .slider {
-      background-color: #66bb6a;
+      background-color: hsl(40, 94%, 58%);
     }
 
     input:checked + .slider:before {
