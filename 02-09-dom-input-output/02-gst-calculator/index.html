@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GST Calculator</title>
+  <script src="js/gst-calculator.js" defer></script>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 36px;
+    }
+
+    input, label, button {
+      display: block;
+      margin: 1rem;
+    }
+    input, button {
+      font-size: 36px;
+    }
+    button {
+      padding: 1rem;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>GST Calculator</h1>
+  <section class="form">
+    <!-- Add form fields here -->
+    <label for="subtotal"><span>Sub-Total:</span> 
+      <input type="number" name="subtotal" id="subtotal" min="0" step=".01">
+    </label>
+    <button>Submit</button>
+  </section>
+  <section>
+    <!-- Replace content with `Element.textContent` -->
+    <p class="output">[Replace with form response]</p>
+  </section>
+</body>
+</html>

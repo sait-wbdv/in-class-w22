@@ -2,7 +2,7 @@
 
 
 // Note: Fat arrow ES6 Syntax
-const calcGST = () => {
+const clickHandler = () => {
   // Refactor to assign value from form field
   const subTotal = 42;
 
