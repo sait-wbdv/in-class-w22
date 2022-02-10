@@ -19,10 +19,15 @@
       font-size: 24px;
     }
 
-    label, input {
+    label, input, option, select {
       display: block;
       margin: 1rem;
       font-size: 24px;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
     }
 
     button {
@@ -39,12 +44,17 @@
           <span>Sub-Total: </span>
           <input type="number" name="subtotal" id="subtotal" min="0" step=".01">
         </label>
-        <label for="tiprate">
-          <span>Tip Rate: </span>
-          <input type="number" name="tiprate" id="tiprate" min="0" step=".01">
+        <label for="service">
+          <span>Service Level: </span>
+          <select name="service" id="service">
+            <option value="">Select One</option>
+            <option value="bad">Bad (12%)</option>
+            <option value="good">Good (18%)</option>
+            <option value="excellent">Excellent (23%)</option>
+          </select>
         </label>
-        <button class="tip-calc">Enter Bill Info</button>
-        <h2><output></output></h2>
+        <button type="submit" class="tip-calc">Enter Bill Info</button>
+        <h2><output id="output"></output></h2>
     </fieldset>
   </form>
 </body>
