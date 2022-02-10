@@ -32,14 +32,20 @@
   </style>
 </head>
 <body>
-  <label for="subtotal">
-    <span>Sub-Total: </span>
-    <input type="number" name="subtotal" id="subtotal" min="0" step=".01">
-  </label>
-  <label for="tiprate">
-    <span>Tip Rate: </span>
-    <input type="number" name="tiprate" id="tiprate" min="0" step=".01">
-  </label>
-  <button class="tip-calc">Enter Bill Info</button>
+  <form action="">
+    <fieldset>
+      <legend>Please enter bill information:</legend>
+        <label for="subtotal">
+          <span>Sub-Total: </span>
+          <input type="number" name="subtotal" id="subtotal" min="0" step=".01">
+        </label>
+        <label for="tiprate">
+          <span>Tip Rate: </span>
+          <input type="number" name="tiprate" id="tiprate" min="0" step=".01">
+        </label>
+        <button class="tip-calc">Enter Bill Info</button>
+        <h2><output></output></h2>
+    </fieldset>
+  </form>
 </body>
 </html>
