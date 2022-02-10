@@ -1,6 +1,6 @@
 const form = document.querySelector('form');
 
-const clickHandler = (event) => {
+const submitHandler = (event) => {
   event.preventDefault();
 
   
@@ -19,4 +19,4 @@ const clickHandler = (event) => {
 }
 
 
-form.addEventListener('submit', clickHandler);
+form.addEventListener('submit', submitHandler);
