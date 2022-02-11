@@ -27,7 +27,7 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 
 // Create form and button variables here
 const button = document.querySelector('button');
-const inputSubTotal = document.querySelector('input');
+const inputSubTotal = document.querySelector('#subtotal');
 const output = document.querySelector('.output');
 
 // Create utility function
@@ -35,7 +35,7 @@ const toPercentage = (rate) => {
 
   const percentage = `${rate * 100}%`;
 
-  console.log(percentage);
+  // console.log(percentage);
   return percentage;
 }
 
@@ -45,19 +45,36 @@ console.log(output);
 
 // Note: Fat arrow ES6 Syntax
 const clickHandler = () => {
+  let error = false;
+  let errorMessage = '';
+  let response = '';
+
   // Refactor to assign value from form field
   // const subTotal = 42;
   const subTotal = Number(inputSubTotal.value);
 
-  console.log(subTotal);
+  if (isNaN(subTotal)) {
+    error = true;
+    errorMessage = "Uh oh, there was an error. Please come back later."
+  }
+  if (subTotal < 0) {
+    error = true;
+    errorMessage = "Please use a positive amount."
+  }
+
+
+  console.log(inputSubTotal);
 
   const total = subTotal * 0.05 + subTotal;
   const gstPercentage = toPercentage(0.05);
   
   // Refactor to output response to paragraph element  
-  // console.log(`$${subTotal} plus GST is $${total.toFixed(2)}.`);
 
-  const response = `$${subTotal.toFixed(2)} plus ${gstPercentage} GST is $${total.toFixed(2)}.`
+  if (error) {
+    response = errorMessage;
+  } else {
+    response = `$${subTotal.toFixed(2)} plus ${gstPercentage} GST is $${total.toFixed(2)}.`
+  }
   output.textContent = response;
 
 }
