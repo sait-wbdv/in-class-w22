@@ -43,7 +43,7 @@ const clickHandler = () => {
   console.log(subTotal);
 
   const total = subTotal * 0.05 + subTotal;
-  const gstPercentage = `${0.05 * 100}%`
+  const gstPercentage = toPercentage(0.05);
   
   // Refactor to output response to paragraph element  
   // console.log(`$${subTotal} plus GST is $${total.toFixed(2)}.`);

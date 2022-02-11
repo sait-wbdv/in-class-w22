@@ -27,7 +27,7 @@ const submitHandler = (event) => {
 
   if (tipRate) {
     const tip = subTotal * tipRate;
-    const tipPercentage = `${tipRate * 100}%`
+    const tipPercentage = toPercentage(tipRate);
     
     form.output.value = `${tipPercentage} tip on $${subTotal} is $${tip.toFixed(2)}.`;
   } else {
