@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  font-size: 24px;
+}
+
+label, textarea {
+  display: block;
+}
+
+input, textarea {
+  font-size: 24px;
+}
