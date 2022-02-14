@@ -27,4 +27,4 @@ const inputHandler = () => {
 }
 
 form.addEventListener('submit',submitHandler);
-form.tweet.addEventListener('input', inputHandler)
+form.tweet.addEventListener('input', inputHandler);
