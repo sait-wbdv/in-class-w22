@@ -4,16 +4,20 @@ const responseElement = document.querySelector('.response');
 const submitHandler = (event) => {
   event.preventDefault();
 
-  const string1 = form.string1.value;
-  const string2 = form.string2.value;
+  const string = form.string.value;
   const phrase = form.phrase.value;
 
   // Use a combination of array and string methods here
-  console.log(string1, string1.length);
-  console.log(string2, string2.length);
+  console.log(string, string.length);
   console.log(phrase, phrase.length);
 
-  responseElement.textContent = phrase.replaceAll(string1, string2);
+  const matches = phrase.matchAll(string);
+  let numberOfMatches = 0;
+  for (const match of matches) {
+    numberOfMatches++;
+  }
+  responseElement.textContent = `${numberOfMatches} matches found.`;
+
 }
 
 form.addEventListener('submit',submitHandler);
