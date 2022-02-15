@@ -14,6 +14,7 @@ const submitHandler = (event) => {
   const matches = phrase.matchAll(string);
   console.log(matches);
   let numberOfMatches = 0;
+  
   for (const match of matches) {
     numberOfMatches++;
   }
