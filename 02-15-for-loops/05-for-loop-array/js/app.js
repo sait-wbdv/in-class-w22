@@ -24,6 +24,6 @@ console.log(foods);
 
 let output = '';
 
-for (let i = 0; i < foods.length; i++) {
+for (let i = 0; i <= foods.length; i++) {
   console.log(foods[i]);
 }
