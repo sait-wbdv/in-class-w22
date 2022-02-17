@@ -1,7 +1,3 @@
-const randomIndex = (length) => {
-  return Math.floor(Math.random() * length);
-}
-
 const fetchData = async function(url) {
   
   try {
@@ -10,17 +6,16 @@ const fetchData = async function(url) {
           throw new Error(response.statusText);
       }
       const data = await response.json();
-      const character = data.data[randomIndex(data.data.length)];
 
-      console.log(character);
+      console.log(data.data[8].films);
 
-      const filmsOutput = `<ul><li>${character.films.join('</li><li>')}</li></ul>`;
+      const filmsOutput = `<ul><li>${data.data[8].films.join('</li><li>')}</li></ul>`;
 
       const output = `
-        <h1>${character.name}</h1>
-        <img src="${character.imageUrl}" alt="Image of ${character.name}">
+        <h1>${data.data[8].name}</h1>
+        <img src="${data.data[8].imageUrl}" alt="Image of ${data.data[8].name}">
         <p>
-          <a href="${character.url}">Raw Data</a>
+          <a href="${data.data[8].url}">Raw Data</a>
         </p>
         <p>Films</p>
         ${filmsOutput}
