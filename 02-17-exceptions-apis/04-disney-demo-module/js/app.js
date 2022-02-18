@@ -1,6 +1,4 @@
-const randomIndex = (length) => {
-  return Math.floor(Math.random() * length);
-}
+import randomIndex from './random-index.js';
 
 const fetchData = async function(url) {
   
@@ -12,7 +10,7 @@ const fetchData = async function(url) {
       const data = await response.json();
       const character = data.data[randomIndex(data.data.length)];
 
-      console.log(character);
+      // console.log(character);
 
       const filmsOutput = `<ul><li>${character.films.join('</li><li>')}</li></ul>`;
 
