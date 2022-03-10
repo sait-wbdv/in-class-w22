@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inline SVG</title>
+  <style>
+    svg {
+      max-width: 50vw;
+      margin: auto;
+      display: block;
+    }
+    rect {
+      fill: grey;
+    }
+    path {
+      fill: black;
+      stroke: none;
+      stroke-width: 5px;
+      fill-opacity: 1;
+    }
+
+    .top {
+      fill: rebeccapurple;
+      stroke: none;
+    }
+  </style>
+</head>
+<body>
+  <h2>Flattened SVG</h2>
+  <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g class="group">
+      <rect width="500" height="500" fill="none"/>
+      <path class="back" fill-rule="evenodd" clip-rule="evenodd" d="M245.325 106H200.542C162.248 106 120.172 123.965 100.789 164.15C88.497 130.111 52.567 126.802 31.2927 148.076C10.5637 168.805 19.4735 225.609 73.3686 217.099C71.0994 223.529 62.9956 278.086 67.2227 251.138C71.4497 224.191 117.808 172.66 175.013 172.66H221.315L245.325 106ZM88.6153 176.796C88.6153 192.267 76.0742 204.808 60.604 204.808C45.1338 204.808 32.5928 192.267 32.5928 176.796C32.5928 161.326 45.1338 148.785 60.604 148.785C76.0742 148.785 88.6153 161.326 88.6153 176.796Z" fill="red" fill-opacity="0.5"/>
+      <path class="top" d="M256.879 172.66H448.27L479 106H283.494L256.879 172.66Z" fill="green" fill-opacity="0.5"/>
+      <path class="intake" d="M454.889 181.169L474.745 140.039V156.113L454.889 197.243V181.169Z" fill="blue" fill-opacity="0.5"/>
+      <path class="side" fill-rule="evenodd" clip-rule="evenodd" d="M444.015 190.152C368.531 189.364 166.976 187.788 166.976 187.788C116.39 187.788 79.9873 232.701 76.678 287.541C73.3686 342.382 120.172 392.968 175.013 393.44C229.853 393.913 268.62 353.728 286.112 313.543C303.605 273.358 355.609 233.646 444.015 233.646V190.152ZM179.15 340.491C205.912 340.491 227.608 318.795 227.608 292.033C227.608 265.27 205.912 243.574 179.15 243.574C152.387 243.574 130.691 265.27 130.691 292.033C130.691 318.795 152.387 340.491 179.15 340.491Z" fill="rebeccapurple" fill-opacity="0.5"/>
+    </g>
+    </svg>
+    
+</body>
+</html>
